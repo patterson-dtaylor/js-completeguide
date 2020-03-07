@@ -6,7 +6,7 @@
 
 ![JS Logo](/intro/markdown-photos/jslogo.png)
 
-- JavaScript (JS) is a **dynamic, weakly** typed programming language which is compiled at **runtime**.  It can be executed as part of a webpage in a brower or directly on any machine ("**host environment**").
+- JavaScript (JS) is a **dynamic, weakly** typed programming language which is compiled at **runtime**.  It can be executed as part of a webpage in a browser or directly on any machine ("**host environment**").
 
 - JS was created **to make webpages more dynamic** (e.g. change content on a page directly from inside the browser). Originally, it was called LiveScript, but due to the popularity of Java, it was renamed to JavaScript. 
 
@@ -97,11 +97,11 @@
 
 - 1996 - JS submitted to ECMA (European Computer Manufacturers Association) International to start standardization.
 
-- 1997 - 2005 - Standarization efforts made.
+- 1997 - 2005 - Standardization efforts made.
 
 - 2006 - 2011 - Huge progress made in JS ecosystem
 
-- 2012 - 2020 - Exponetial growth and evolution of the language
+- 2012 - 2020 - Exponential growth and evolution of the language
 
 ## ECMAScript and JS
 
