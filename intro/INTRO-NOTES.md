@@ -2,6 +2,21 @@
 
 ---
 
+- [JavaScript Intro Notes](#javascript-intro-notes)
+  - [What is JavaScript?](#what-is-javascript)
+  - [How is JavaScript Executed?](#how-is-javascript-executed)
+  - [Dynamic? Weakly Typed?](#dynamic-weakly-typed)
+    - [Dynamic, interpreted Programming Language](#dynamic-interpreted-programming-language)
+    - [Weakly Typed Programming Language](#weakly-typed-programming-language)
+  - [Running JS on a Host Environment](#running-js-on-a-host-environment)
+    - [Client-Side (Browser-Side)](#client-side-browser-side)
+    - [Server-Side (Node.js)](#server-side-nodejs)
+    - [Why Learn the Client-Side First?](#why-learn-the-client-side-first)
+  - [Some JS History](#some-js-history)
+  - [ECMAScript and JS](#ecmascript-and-js)
+    - [ECMAScript](#ecmascript)
+    - [JS](#js)
+
 ## What is JavaScript?
 
 ![JS Logo](/intro/markdown-photos/jslogo.png)
@@ -79,7 +94,7 @@
 
 - Node.js CANNOT **manipulate** HTML or CSS.
 
-#### Note: The syntax, concepts, core features, etc. ARE exactly the same!
+**Note: The syntax, concepts, core features, etc. ARE exactly the same!**
 
 ### Why Learn the Client-Side First?
 
@@ -117,4 +132,4 @@
 
 - Each browser comes with its own JS engine that also defines which features are actually supported by that specific browser
 
-#### Both are under ACTIVE development
+**Both are under ACTIVE development**
