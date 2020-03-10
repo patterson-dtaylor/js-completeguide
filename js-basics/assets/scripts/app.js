@@ -1,7 +1,5 @@
 /* eslint-disable no-undef */
 // Basic Calculator Needs//
-// 1. Result Variable 
-// 2. 
 
 const defaultResult = 0;
 let currentResult = defaultResult;
@@ -74,19 +72,6 @@ subtractBtn.addEventListener('click', subtractNumbers);
 multiplyBtn.addEventListener('click', multiplyNumbers);
 divideBtn.addEventListener('click', divideNumbers);
 
-// currentResult = addNumbers(7, 8);
-
-// On the right side of the "=", we are referring to currentResult.  
-// You could say: We're reading (& using) its current value.
-// currentResult = ((currentResult + 10) * 3) / 2 - 1;
-
-// Although this is a mathematical equation, because this is a string,
-// it will expressed as a string with quotes.
-// Example of string concatenation. 
-// let calculationDescription = `( ${defaultResult} + 10) * 3 / 2 -1`;
-
-// \n = line break
-// let errorMessage = 'An error \n' + 'occurred!';
 
 
 
