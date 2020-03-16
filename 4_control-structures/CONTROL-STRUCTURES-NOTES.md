@@ -4,8 +4,6 @@
 
 ## Conditional Statements (if statements) & Expressions
 
----
-
 ### Boolean Operators
 
 **Boolean Operators** or (Conditional Operators): these operators are important for conditional code that return ```true``` or ```false```.
@@ -154,16 +152,259 @@ Because ```nameInput``` yields a string and **NOT** a boolean, JavaScript tries 
 | ALL objects {} and arrays [] | true |
 | null, undefined, and NaN | false |
 
-## Boolean Values & Operators
+## Ternary Operators (Conditional Expressions)
 
----
+**Remember** if statements return **NO** value!
 
+- This will not work!
 
+```javascript
+const userName = if (isLogin) {
+    return 'Taylor';
+} else {
+    return null;
+}
+```
+- You **can** use this, however!
+
+```javascript
+const userName = isLogin ? 'Taylor' : null;
+```
+
+- This reads as: if condition (isLogin) is truthy return (?) value ('Taylor'), else ( : ) return null.
+
+## "Boolean Tricks" with Logical Operators
+
+- Boolean Coercion via double negative (**double bang: !!**) operator
+  - Example: ```!!""``` or ```!!1```
+  - Reason: this gives a true boolean rather than a truthy or falsy value.
+
+- Default value assignment via **OR** ( || ) operator
+  - Example: ```const name = someInput || 'Taylor';```
+  - Reason: return someInput if not falsy, return 'Taylor' otherwise.
+
+- Use value if condition is true via **AND** ( && ) operator
+  - Example: ```const name = isLoggedIn && 'Taylor';```
+  - Reason: if isLoggedIn is true, then 'Taylor' will be return.  Return false otherwise.
+
+## Working with "switch-case" Statements
+
+Much like an if/else if statement, a switch statement takes an expression that yields a value.
+
+- Best used in the case where you have many else if statements. 
+
+- Here's the structure:
+
+```javascript
+switch (condition) {
+    case condition met:
+        return value;
+        break;
+}
+```
 
 ## Loops in JavaScript
 
----
+Loops offer a quick and easy way to repeat an action some number of times.
+
+There are 4 main types of loops:
+
+1. for loop:
+   - Executes code a certain amount of times (with counter variable)
+
+Example: incrementing the variable:
+
+```javascript
+for (let i = 0; i < 3; i++) {
+    console.log(i);
+}
+```
+
+Example: decrementing the variable:
+
+```javascript
+for (let i = 10; i > 0; i--) {
+    console.log(i)
+}
+```
+
+Example of for loop with an array
+
+```javascript
+for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+}
+```
+
+2. for-of loop:
+   - Executes for every element in an array
+
+Example: incrementing the variable:
+
+```javascript
+for (const el of array) {
+    console.log(el);
+}
+```
+Another example:
+
+```javascript
+for (const logEntry of array) {
+    console.log(logEntry);
+}
+```
+**Note** if you want the index of eace value in the array you **must** set a variable for index before the loop and **increment** the variable.  Such as:
+
+```javascript
+let i = 0;
+for (const el of array) {
+    console.log(el);
+    console.log(i);
+    i++;
+}
+```
+
+3. for-in loop:
+   - Executes for every key in an object
+   - Example:
+
+```javascript
+for (const key in obj) {
+    console.log(key);
+    console.log(obj[key]);
+}
+```
+
+or you can use a nested loop such as:
+
+```javascript
+let i = 0;
+    for (const logEntry of battleLog) {
+        console.log(`#${i}`);
+        for (const key in logEntry) {
+            console.log(`${key} => ${logEntry[key]}`);
+        }
+        i++;
+    }
+```
+
+4. while loop:
+   - Executes code as long as a condition is true
+   - Example
+
+```javascript
+let n = 0;
+let x = 0;
+while (n < 3) {
+    n++;
+    x += n;
+}
+```
+
+- After the first pass: ```n``` = ```1``` and ```x``` = ```1```
+- After the second pass: ```n``` = ```2``` and ```x``` = ```3```
+- After the third pass: ```n``` = ```3``` and ```x``` = ```6```
+
+or
+
+```javascript
+let randomNumbers = [];
+let finished = false;
+while (!finished) {
+    const rndNumber = Math.random();
+    randomNumbers.push(rndNumber);
+    if (rndNumber > 0.5) {
+        finished = true;
+        console.log(randomNumbers);
+    }
+}
+```
+
+**do** while loop executes the condition prior to the loop. For example:
+
+```javascript
+let i = 3;
+do {
+    console.log(i);
+    i++;
+} while (i < 3);
+```
+
+**note** the result is 3 because the ```do``` loop block is ran before the loop.
+
+## Break and Continue Keywords
+
+- **break** is a keyword used when you want to stop a loop at a certain point. 
+- Example:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        break;
+    }
+    console.log(i);
+}
+```
+
+This will stop the loop at 3.
+
+- **continue** is a keyword much like break, however it allows the loop to continue rather than fully stopping the loop
+- Example:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+```
+
+This will skip 3 and continue with the rest of the loop.
+
+## Labeled Statements
+
+- Although rarely seen, these are developer generated keywords for loops.
+- Example:
+
+```javascript
+let i = 3;
+outerWhile: do {
+    console.log('Outer', i);
+    for (let i = 0; i < 5; i++) {
+        if (i === 3) {
+            break outerWhile;
+            //continue outerWhile;  This is dangerous! Infinite LOOP!
+        }
+        console.log('Inner', i);
+    }
+    i++;
+} while (i < 3);
+```
+
+This will break the outerWhile loop when the inner for loop outputs 3.
 
 ## Error Handling
 
----
+- **First**, Some errors can't be avoided (beyond your control as a developer)
+  - User Input Errors
+    - For example: users enters text like 'hi' instead of a number
+  - Network Errors
+    - For example: server is offline
+
+- To combat this you need to **throw** and **catch** errors to fail gracefully or recover if possible
+
+- ```throw``` example:
+
+```javascript
+const userInput = prompt('Give me a number.');
+if (isNaN(userInput) || userInput <= 0) {
+    throw { message: 'Invalid user input, not a number!' };
+}
+```
+
+- the **try catch** error handling is mostly used in the server-side, however you can use it on the front-side.  
+
+-Typical **try catch** syntax.
+
+```try {...} catch(error) {...}```
