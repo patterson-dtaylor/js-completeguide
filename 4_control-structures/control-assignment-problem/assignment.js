@@ -2,12 +2,14 @@
 const randomNumber = Math.random();
 const rndNumber = Math.random();
 
+// #1
 if (randomNumber >= 0.7) {
     alert(`Got it! Your number is ${randomNumber}!`);
 } else {
     alert(`Nope, ${randomNumber} is less!`);
 }
 
+// #4
 if (
     (randomNumber > 0.7 && rndNumber > 0.7) || 
     rndNumber <= 0.2 || 
@@ -18,6 +20,7 @@ if (
 console.log(randomNumber);
 console.log(rndNumber);
 
+// #2 
 const numbers = [1, 2, 3, 4, 5];
 for (let i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
@@ -33,7 +36,7 @@ while (counter < numbers.length) {
     counter++;
 }
 
-// backwards loops
+// #3 backwards loops
 
 for (const num of numbers.reverse()) {
     console.log(num);
