@@ -1,5 +1,10 @@
 # Mastering (JS) Development
 
+- [Mastering (JS) Development](#mastering-js-development)
+  - [Writing Code Efficiently](#writing-code-efficiently)
+  - [How To Find Help](#how-to-find-help)
+  - [How to Debug Your Code](#how-to-debug-your-code)
+
 ---
 
 ## Writing Code Efficiently

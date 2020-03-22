@@ -1,5 +1,17 @@
 # Behind The Scenes of JavaScript
 
+- [Behind The Scenes of JavaScript](#behind-the-scenes-of-javascript)
+  - [ES5 vs ES6](#es5-vs-es6)
+  - [```var``` vs ```let``` vs ```const```](#var-vs-let-vs-const)
+    - [```var``` vs ```let``` scopes](#var-vs-let-scopes)
+    - [Hoisting](#hoisting)
+    - [Re-declaring vs Reassigning](#re-declaring-vs-reassigning)
+  - [Strict Mode](#strict-mode)
+  - [How JS is Parsed and Compiled](#how-js-is-parsed-and-compiled)
+  - [How Code Gets Executed (The Steps of Logic)](#how-code-gets-executed-the-steps-of-logic)
+  - [Primitive vs Reference Types](#primitive-vs-reference-types)
+  - [Garbage Collection & Memory Management](#garbage-collection--memory-management)
+
 ---
 
 ## ES5 vs ES6
