@@ -1,5 +1,21 @@
 # Control Structures (Conditional Code & Loops)
 
+- [Control Structures (Conditional Code & Loops)](#control-structures-conditional-code--loops)
+  - [Conditional Statements (if statements) & Expressions](#conditional-statements-if-statements--expressions)
+    - [Boolean Operators](#boolean-operators)
+    - [Conditional Code](#conditional-code)
+    - [Comparing Objects and Arrays](#comparing-objects-and-arrays)
+    - [Combining Conditions](#combining-conditions)
+    - [Operator Precedence](#operator-precedence)
+    - [Falsy and Truthy Values](#falsy-and-truthy-values)
+  - [Ternary Operators (Conditional Expressions)](#ternary-operators-conditional-expressions)
+  - ["Boolean Tricks" with Logical Operators](#boolean-tricks-with-logical-operators)
+  - [Working with "switch-case" Statements](#working-with-switch-case-statements)
+  - [Loops in JavaScript](#loops-in-javascript)
+  - [Break and Continue Keywords](#break-and-continue-keywords)
+  - [Labeled Statements](#labeled-statements)
+  - [Error Handling](#error-handling)
+
 ---
 
 ## Conditional Statements (if statements) & Expressions
